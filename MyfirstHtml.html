@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+    
+
+	<title>My Fist HTML Code</title>
+</head>
+<body>
+    <p>TEST</p>
+    <p>TEST2</p>
+    <p>TEST3</p>
+    <p>TEST</p>
+    <p>TEST2</p>
+    <p>이름: <span id="username">홍길동</span></p>
+    <p>Index: <span id="Indexvalue"></span></p>
+    <p>BIndex: <span id="Indexvalue1"></span></p>
+    <button onclick="changeName()">이름 변경</button>
+    
+    <script>
+        let names = ["ABC","DEF","GHI"];
+        let index = 0;
+
+        function changeName() {
+            document.getElementById("Indexvalue1").textContent = "Before index : " + index;
+            
+            index  = (index+1)%names.length;
+            document.getElementById("Indexvalue").textContent = "After index : " + index;
+            document.getElementById("username").textContent = names[index];
+            
+        }
+    </script>
+    
+</body>
+</html>
